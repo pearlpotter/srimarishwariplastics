@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Sri Marishwari Plastics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search-filter-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Sri Marishwari Plastics</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-catalog">
+        <div class="catalog-header">
+            <h1>Our Products</h1>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+                <button id="search-button" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="category-filter">Category</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="household">Household</option>
+                    <option value="industrial">Industrial</option>
+                    <option value="storage">Storage</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="material-filter">Material</label>
+                <select id="material-filter">
+                    <option value="all">All Materials</option>
+                    <option value="hdpe">HDPE</option>
+                    <option value="pp">Polypropylene</option>
+                    <option value="pet">PET</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="capacity-filter">Capacity</label>
+                <select id="capacity-filter">
+                    <option value="all">All Sizes</option>
+                    <option value="small">Small (< 1L)</option>
+                    <option value="medium">Medium (1-5L)</option>
+                    <option value="large">Large (> 5L)</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sort-filter">Sort By</label>
+                <select id="sort-filter">
+                    <option value="featured">Featured</option>
+                    <option value="newest">Newest</option>
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="active-filters" id="active-filters">
+            <!-- Active filters will be displayed here -->
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" 
+                data-category="household" 
+                data-material="pp" 
+                data-capacity="medium"
+                data-tags="kitchen,storage,container,food"
+                data-date="2025-10-01">
+                <div class="product-image">
+                    <img src="images/products/placeholder.jpg" alt="Storage Container Set">
+                    <div class="product-overlay">
+                        <a href="products/container-set.html" class="view-details">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Storage Container Set</h3>
+                    <p class="product-category">Household Storage</p>
+                    <div class="product-tags">
+                        <span class="tag">Food Safe</span>
+                        <span class="tag">Microwave Safe</span>
+                    </div>
+                    <p class="product-description">High-quality plastic storage containers for kitchen and home use.</p>
+                </div>
+            </div>
+
+            <div class="product-card" 
+                data-category="industrial" 
+                data-material="hdpe" 
+                data-capacity="large"
+                data-tags="industrial,storage,bin,heavy-duty"
+                data-date="2025-09-15">
+                <div class="product-image">
+                    <img src="images/products/placeholder.jpg" alt="Industrial Storage Bin">
+                    <div class="product-overlay">
+                        <a href="products/industrial-bin.html" class="view-details">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Industrial Storage Bin</h3>
+                    <p class="product-category">Industrial</p>
+                    <div class="product-tags">
+                        <span class="tag">Heavy Duty</span>
+                        <span class="tag">Stackable</span>
+                    </div>
+                    <p class="product-description">Heavy-duty industrial storage bins for warehouse use.</p>
+                </div>
+            </div>
+
+            <div class="product-card" 
+                data-category="household" 
+                data-material="pet" 
+                data-capacity="small"
+                data-tags="bottle,water,beverage,drink"
+                data-date="2025-10-10">
+                <div class="product-image">
+                    <img src="images/products/placeholder.jpg" alt="Water Bottle">
+                    <div class="product-overlay">
+                        <a href="products/water-bottle.html" class="view-details">View Details</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Water Bottle</h3>
+                    <p class="product-category">Household</p>
+                    <div class="product-tags">
+                        <span class="tag">BPA Free</span>
+                        <span class="tag">Dishwasher Safe</span>
+                    </div>
+                    <p class="product-description">Durable and eco-friendly water bottle for daily use.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@srimarishwariplastics.com</p>
+                <p>Phone: +91 XXX XXX XXXX</p>
+                <p>Address: [Your Address]</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Sri Marishwari Plastics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Product search and filtering functionality
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const categoryFilter = document.getElementById('category-filter');
+        const materialFilter = document.getElementById('material-filter');
+        const capacityFilter = document.getElementById('capacity-filter');
+        const sortFilter = document.getElementById('sort-filter');
+        const activeFilters = document.getElementById('active-filters');
+        const products = document.querySelectorAll('.product-card');
+
+        // Initialize current filters
+        let currentFilters = {
+            search: '',
+            category: 'all',
+            material: 'all',
+            capacity: 'all',
+            sort: 'featured'
+        };
+
+        // Apply all filters and search
+        function applyFilters() {
+            products.forEach(product => {
+                const matchesSearch = searchProduct(product, currentFilters.search);
+                const matchesCategory = currentFilters.category === 'all' || product.dataset.category === currentFilters.category;
+                const matchesMaterial = currentFilters.material === 'all' || product.dataset.material === currentFilters.material;
+                const matchesCapacity = currentFilters.capacity === 'all' || product.dataset.capacity === currentFilters.capacity;
+
+                product.style.display = (matchesSearch && matchesCategory && matchesMaterial && matchesCapacity) ? 'block' : 'none';
+            });
+
+            sortProducts();
+            updateActiveFilters();
+        }
+
+        // Search functionality
+        function searchProduct(product, searchTerm) {
+            if (!searchTerm) return true;
+            
+            const searchText = [
+                product.querySelector('h3').textContent,
+                product.querySelector('.product-description').textContent,
+                product.dataset.tags
+            ].join(' ').toLowerCase();
+
+            return searchText.includes(searchTerm.toLowerCase());
+        }
+
+        // Sort products
+        function sortProducts() {
+            const productArray = Array.from(products);
+            const productGrid = document.querySelector('.product-grid');
+
+            productArray.sort((a, b) => {
+                switch (currentFilters.sort) {
+                    case 'newest':
+                        return new Date(b.dataset.date) - new Date(a.dataset.date);
+                    case 'name-asc':
+                        return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);
+                    case 'name-desc':
+                        return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);
+                    default: // 'featured'
+                        return 0;
+                }
+            });
+
+            productArray.forEach(product => productGrid.appendChild(product));
+        }
+
+        // Update active filters display
+        function updateActiveFilters() {
+            const activeFilterTags = [];
+
+            if (currentFilters.search) {
+                activeFilterTags.push(`Search: "${currentFilters.search}"`);
+            }
+            if (currentFilters.category !== 'all') {
+                activeFilterTags.push(`Category: ${currentFilters.category}`);
+            }
+            if (currentFilters.material !== 'all') {
+                activeFilterTags.push(`Material: ${currentFilters.material}`);
+            }
+            if (currentFilters.capacity !== 'all') {
+                activeFilterTags.push(`Capacity: ${currentFilters.capacity}`);
+            }
+
+            if (activeFilterTags.length > 0) {
+                activeFilters.innerHTML = activeFilterTags.map(tag => `
+                    <span class="filter-tag">
+                        ${tag}
+                        <button onclick="clearFilter('${tag.split(':')[0].toLowerCase()}')" aria-label="Remove filter">×</button>
+                    </span>
+                `).join('');
+                activeFilters.style.display = 'flex';
+            } else {
+                activeFilters.style.display = 'none';
+            }
+        }
+
+        // Clear specific filter
+        function clearFilter(filterType) {
+            switch (filterType) {
+                case 'search':
+                    searchInput.value = '';
+                    currentFilters.search = '';
+                    break;
+                case 'category':
+                    categoryFilter.value = 'all';
+                    currentFilters.category = 'all';
+                    break;
+                case 'material':
+                    materialFilter.value = 'all';
+                    currentFilters.material = 'all';
+                    break;
+                case 'capacity':
+                    capacityFilter.value = 'all';
+                    currentFilters.capacity = 'all';
+                    break;
+            }
+            applyFilters();
+        }
+
+        // Event Listeners
+        searchInput.addEventListener('input', debounce(function() {
+            currentFilters.search = this.value;
+            applyFilters();
+        }, 300));
+
+        searchButton.addEventListener('click', function() {
+            currentFilters.search = searchInput.value;
+            applyFilters();
+        });
+
+        [categoryFilter, materialFilter, capacityFilter, sortFilter].forEach(filter => {
+            filter.addEventListener('change', function() {
+                currentFilters[this.id.split('-')[0]] = this.value;
+                applyFilters();
+            });
+        });
+
+        // Debounce helper function
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Initialize
+        applyFilters();
+    </script>
+</body>
+</html>
